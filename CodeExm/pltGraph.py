@@ -4,7 +4,6 @@ import pandas as pd
 
 
 def pltGraph1():
-
     # Build a dataframe with your connections
     df = pd.DataFrame({'from': ['A', 'B', 'C', 'A'], 'to': ['D', 'A', 'E', 'C']})
 
@@ -15,6 +14,7 @@ def pltGraph1():
     # with_labels是否显示标签，node_size节点大小，node_color节点颜色，node_shape节点形状，alpha透明度，linewidths线条宽度
     nx.draw(G, with_labels=True, node_size=1500, node_color="skyblue", node_shape="s", alpha=0.5, linewidths=10)
     plt.show()
+
 
 def pltGraph2():
     G = nx.Graph()
@@ -44,6 +44,7 @@ def pltGraph2():
     plt.axis('off')
     plt.show()
 
+
 def pltGraph3():
     # Build a dataframe with your connections
     df = pd.DataFrame({'from': ['A', 'B', 'C', 'A'], 'to': ['D', 'A', 'E', 'C']})
@@ -56,6 +57,7 @@ def pltGraph3():
     nx.draw(G, with_labels=True, node_size=1500, font_size=25, font_color="yellow", font_weight="bold")
     plt.show()
 
+
 def pltGraph4():
     # Build a dataframe with your connections
     df = pd.DataFrame({'from': ['A', 'B', 'C', 'A'], 'to': ['D', 'A', 'E', 'C']})
@@ -65,6 +67,7 @@ def pltGraph4():
     # width边线条宽，edge_color边线条颜色
     nx.draw(G, with_labels=True, width=10, edge_color="skyblue", style="solid")
     plt.show()
+
 
 def pltGraph5():
     # Build a dataframe with your connections
@@ -77,6 +80,7 @@ def pltGraph5():
     nx.draw(G, with_labels=True, node_size=1500, node_color="skyblue", node_shape="o", alpha=0.5, linewidths=4,
             font_size=25, font_color="grey", font_weight="bold", width=2, edge_color="grey")
     plt.show()
+
 
 def pltGraph6Layout():
     # Build a dataframe with your connections
@@ -101,6 +105,7 @@ def pltGraph6Layout():
     # # Spring 跳跃式布局
     # nx.draw(G, with_labels=True, node_size=1500, node_color="skyblue", pos=nx.spring_layout(G))
     # plt.title("spring")
+
 
 def pltGraph7Color():
     # Build a dataframe with your connections
@@ -133,6 +138,7 @@ def pltGraph7Color():
     nx.draw(G, with_labels=True, node_color=carac['myvalue'].cat.codes, cmap=plt.cm.Set1, node_size=1500)
     plt.show()
 
+
 def pltGraph8EdgeColor():
     # Build a dataframe with your connections
     # value设定链接值
@@ -146,6 +152,7 @@ def pltGraph8EdgeColor():
     nx.draw(G, with_labels=True, node_color='skyblue', node_size=1500, edge_color=df['value'], width=10.0,
             edge_cmap=plt.cm.Blues)
     plt.show()
+
 
 def pltGraph9EdgeColor2():
     ## 类别型 categorical
@@ -173,6 +180,7 @@ def pltGraph9EdgeColor2():
     nx.draw(G, with_labels=True, node_color='skyblue', node_size=1500, edge_color=df['value'].cat.codes, width=10.0,
             edge_cmap=plt.cm.Set2)
     plt.show()
+
 
 def pltMLP():
     import matplotlib.pyplot as plt
@@ -208,5 +216,7 @@ def pltMLP():
             edge_cmap=plt.cm.Blues
             )
     plt.show()
+
+
 if __name__ == '__main__':
     pltGraph9EdgeColor2()
