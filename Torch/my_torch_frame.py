@@ -110,7 +110,7 @@ def train(model, device, train_loader, optimizer, criterion, epoch):
     for batch_idx, (data, target) in enumerate(train_loader):
         data, target = data.to(device), target.to(device)
         output = model(data)
-        loss = criterion(output, target)  # loss a batch
+        loss = criterion(output, target)  
 
         optimizer.zero_grad()
         loss.backward()
